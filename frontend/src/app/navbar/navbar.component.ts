@@ -17,6 +17,8 @@ export class NavbarComponent implements OnInit {
 
   cart=0;
   fav=0;
+  adm='';
+  token='';
 
 
   ngOnInit(): void {
@@ -24,6 +26,13 @@ export class NavbarComponent implements OnInit {
     this.cart = JSON.parse(localStorage.getItem("cart")!).length;
 
     this.fav = JSON.parse(localStorage.getItem("fav")!).length;
+
+    this.token = localStorage.getItem("token")!;
+    
+
+    this.adm = localStorage.getItem("adm")!;
+
+
     
 
   }

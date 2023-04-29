@@ -14,8 +14,12 @@ export class MenComponent implements OnInit {
   token:any;
   cartprod:any[] = [];
   favprod:any[] = [];
+  adm='';
 
   ngOnInit(): void {
+
+    this.adm = localStorage.getItem("adm")!;
+    
     this._prod.getbycategorie('men clothes')
     .subscribe({
       next:(res)=>{

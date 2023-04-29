@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
 
             localStorage.setItem('cart', this.cl.chart);
             localStorage.setItem('fav', this.cl.favorite);
+            localStorage.setItem('adm', this.cl.adm);
             window.location.reload();
             
           },

@@ -14,6 +14,9 @@ import { BagsComponent } from './shop/bags/bags.component';
 import { MenComponent } from './shop/men/men.component';
 import { ShopComponent } from './shop/shop.component';
 import { WomenComponent } from './shop/women/women.component';
+import { OrdersComponent } from './orders/orders.component';
+import { ModifieComponent } from './modifie/modifie.component';
+import { MessagesComponent } from './messages/messages.component';
 
 const routes: Routes = [
 
@@ -26,14 +29,17 @@ const routes: Routes = [
     {path: 'baby', component:BabyComponent},
     {path: 'accessories', component:AccessoriesComponent},
     {path: 'bags', component:BagsComponent},
-    {path: 'all', component:AllComponent}
+    {path: 'all', component:AllComponent},
+    {path: 'modifie/:id', component:ModifieComponent}
   ]},
   {path:'contact', component:ContactComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'detail/:id', component:ProdDetailComponent},
   {path: 'cart', component:CartComponent},
-  {path: 'fav', component:FavComponent}
+  {path: 'fav', component:FavComponent},
+  {path: 'orders', component:OrdersComponent},
+  {path: 'messages', component:MessagesComponent}
 
 ];
 

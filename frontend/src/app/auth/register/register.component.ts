@@ -18,7 +18,8 @@ export class RegisterComponent implements OnInit {
     email:'',
     password:'',
     favorite:'[]',
-    chart:'[]'
+    chart:'[]',
+    adm: 'f'
   };
 
 

@@ -27,9 +27,20 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a routerLink="/home" class="nav-item nav-link">Home</a>
+                            <div *ngIf="adm == 'f'">
+                                <a routerLink="/home" class="nav-item nav-link">Home</a>
+                            </div>
                             <a routerLink="/shop/all" class="nav-item nav-link">Shop</a>
-                            <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+                            <div *ngIf="adm == 'f'">
+                                <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+                            </div>
+                            <div *ngIf="adm == 't'">
+                                <a routerLink="/orders" class="nav-item nav-link">Orders</a>
+                            </div>
+                            <div *ngIf="adm == 't'">
+                                <a routerLink="/messages" class="nav-item nav-link">Messages</a>
+                            </div>
+
                         </div>
                             <div *ngIf="token==''" class="navbar-nav ml-auto py-0">
                                 <a routerLink="/login" class="nav-item nav-link">Login</a>

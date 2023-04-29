@@ -16,9 +16,12 @@ prod:any;
 token:any;
 cartprod:any[] = [];
 favprod:any[] = [];
+adm='';
 
 
   ngOnInit(): void {
+
+    this.adm = localStorage.getItem("adm")!;
     
     this._prod.getall()
     .subscribe({

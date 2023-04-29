@@ -15,8 +15,11 @@ export class BabyComponent implements OnInit {
   token:any;
   cartprod:any[] = [];
   favprod:any[] = [];
+  adm='';
 
   ngOnInit(): void {
+    this.adm = localStorage.getItem("adm")!;
+
     this._prod.getbycategorie('baby clothes')
     .subscribe({
       next:(res)=>{

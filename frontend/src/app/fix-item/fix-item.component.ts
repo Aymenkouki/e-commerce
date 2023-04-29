@@ -15,8 +15,11 @@ export class FixItemComponent implements OnInit {
   clientname:any;
   id:any;
   client:any;
+  adm='';
 
   ngOnInit(): void {
+    
+    this.adm = localStorage.getItem("adm")!;
 
     this.token = localStorage.getItem('token');
     if(this.token != ''){
@@ -60,6 +63,7 @@ export class FixItemComponent implements OnInit {
 
 
     localStorage.setItem('token','');
+    localStorage.setItem('adm','f');
     localStorage.setItem('cart', '[]');
     localStorage.setItem('fav', '[]');
 

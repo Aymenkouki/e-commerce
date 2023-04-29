@@ -21,6 +21,9 @@ import { BagsComponent } from './shop/bags/bags.component';
 import { AllComponent } from './shop/all/all.component';
 import { CartComponent } from './cart/cart.component';
 import { FavComponent } from './fav/fav.component';
+import { OrdersComponent } from './orders/orders.component';
+import { ModifieComponent } from './modifie/modifie.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { FavComponent } from './fav/fav.component';
     AllComponent,
     CartComponent,
     FavComponent,
+    OrdersComponent,
+    ModifieComponent,
+    MessagesComponent,
 
   ],
   imports: [

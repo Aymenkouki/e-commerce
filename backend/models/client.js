@@ -6,7 +6,8 @@ const client = mongoose.model('client',{
     email : String,
     password : String,
     favorite : String,
-    chart : String
+    chart : String,
+    adm : String
 
 })
 

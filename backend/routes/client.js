@@ -46,7 +46,8 @@ router.post('/login', (req,res)=>{
                         _id : result.id,
                         email : result.email,
                         name : result.name,
-                        lastname : result.lastname
+                        lastname : result.lastname,
+                        adm : result.adm
                     }
                     let token = jwt.sign(payload , '123456');
                     res.status(200).send({token});

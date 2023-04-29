@@ -15,8 +15,13 @@ export class AccessoriesComponent implements OnInit {
   token:any;
   cartprod:any[] = [];
   favprod:any[] = [];
+  adm='';
 
   ngOnInit(): void {
+
+    this.adm = localStorage.getItem("adm")!;
+
+    
     this._prod.getbycategorie('accessories')
     .subscribe({
       next:(res)=>{
