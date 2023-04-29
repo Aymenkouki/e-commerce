@@ -1,0 +1,21 @@
+<div class="container-fluid pt-2">
+    <div class="row px-xl-5">
+        <div class="col-lg-8 my-4  mx-auto">
+            <div class="contact-form">
+                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+
+                    <div class="control-group">
+                        <input type="email" [(ngModel)]="client.email" name="email" class="form-control p-4 my-4" id="email" placeholder="Your Email"/>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group">
+                        <input type="password" [(ngModel)]="client.password" name="password" class="form-control p-4 my-4" id="password" placeholder="Your Password"/>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div>
+                        <button (click)="login()" class="btn btn-primary p-3 my-2" type="submit" id="sendMessageButton"> Login Now</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>

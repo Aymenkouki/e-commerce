@@ -1,0 +1,33 @@
+<div >
+    <h1 class="text-danger">Shopping Favorite</h1>
+    <p class="lead">You have <label class="text-danger">{{favl}}</label> items in your fav</p>
+    <div class="clear mb-4">
+        <button (click)="clear()" class="text-danger card-header btn clear">Clear shopping Fav</button>
+    </div>
+
+    <div class="prod">
+    <table class="table table-striped w-75 text-center">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of prods ; let i = index ">
+            <tr>
+                <td><img [src]="'http://127.0.0.1:3000/getimage/' + item.image" alt=""></td>
+                <td>{{item.titre}}</td>
+                <td>{{item.prix}} L.E</td>
+                <td>
+                    <button (click)="ADD(item._id)" class="btn btn-info mr-3">Add to Cart List</button>
+                    <button (click)="delete(item._id)" class="btn btn-danger">Delete From Fav List</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+</div>
+

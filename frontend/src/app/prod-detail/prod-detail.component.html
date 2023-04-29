@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-lg-5 pb-5">
+            <img class="w-100 h-75 mt-5" [src]="'http://127.0.0.1:3000/getimage/' + prod.image" alt="Image">
+        </div>
+
+        <div class="col-lg-7 pb-5">
+            <h3 class="font-weight-semi-bold">{{prod.titre}}</h3>
+            <h3 class="font-weight-semi-bold mb-4">${{prod.prix}}</h3>
+            <p class="mb-4">{{prod.description}}</p>
+            <div class="d-flex align-items-center pt-2">
+
+                <button (click)="addfav(prod._id)" class="btn btn-primary px-3 mx-1"><i class="fa fa-heart"></i> Add To favorite </button>
+                <button (click)="addcart(prod._id)" class="btn btn-primary px-3 mx-1"><i class="fa fa-shopping-cart"></i> Add To Cart </button>
+
+            </div>

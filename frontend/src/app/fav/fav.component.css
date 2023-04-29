@@ -1,0 +1,17 @@
+.clear{
+    display: flex;
+    justify-content: end;
+}
+.quantity{
+    display: flex;
+    justify-content: start;
+}
+
+img{
+    width: 100px;
+    height: 70px;
+}
+ .prod{
+    display: flex;
+    justify-content: center;
+ }

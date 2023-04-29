@@ -1,0 +1,13 @@
+.clear{
+    display: flex;
+    justify-content: end;
+}
+.quantity{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 100px;
+    height: 70px;
+}

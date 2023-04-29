@@ -1,0 +1,30 @@
+<div class="row px-xl-2 pb-3">
+    <div *ngFor="let item of prod" class="col-lg-3 col-md-6 col-sm-12 pb-1">
+        <div class="card product-item border-0 mb-4">
+            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0"  [routerLink]="['/detail',item._id]">
+                <img class="img-fluid w-100" [src]="'http://127.0.0.1:3000/getimage/' + item.image" alt="">
+            </div>
+            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3"  [routerLink]="['/detail',item._id]">
+                <h6 class="text-truncate mb-3">{{item.titre}}</h6>
+                <div class="d-flex justify-content-center">
+                    <h6>${{item.prix}}</h6>
+                </div>
+                <div  *ngIf = "item.stock >0">
+                    <h6 class="text-center text-success mt-2">Disponible en stock</h6>
+                </div>
+                <div  *ngIf = "item.stock == 0">
+                    <h6 class="text-center text-danger mt-2">Hors stock</h6>
+                </div>
+
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-light border">
+                <button [routerLink]="['/detail',item._id]" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</button>
+                <button (click)="addfav(item._id)" class="btn btn-sm text-dark p-0"><i class="fas fa-heart text-primary mr-1"></i> Like/Dislike </button>
+                <button (click)="addcart(item._id)" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i> Add To Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
