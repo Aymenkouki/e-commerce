@@ -112,6 +112,7 @@ router.put('/update/:id', upload.any('image'), (req,res)=>{
     .then(
         (result)=>{
             res.send(result);
+            filename='';
         }
     )
     .catch(

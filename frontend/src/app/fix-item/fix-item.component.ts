@@ -51,7 +51,7 @@ export class FixItemComponent implements OnInit {
     this._auth.update(this.id, this.client)
     .subscribe({
       next:(res)=>{
-        console.log(this.client);
+       
         
       },
       error:(err)=>{
@@ -68,7 +68,6 @@ export class FixItemComponent implements OnInit {
     localStorage.setItem('fav', '[]');
 
     window.location.reload();
-
 
   }
 

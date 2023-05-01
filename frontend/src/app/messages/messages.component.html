@@ -1,1 +1,43 @@
-<p>messages works!</p>
+<h1 class="text-danger"> INBOX </h1>
+<p class="lead">You have <label class="text-danger">{{msg.length}}</label> message(s) in your inbox</p>
+
+<div class="row mt-3">
+    <table class="table">
+        <thead>
+            <tr class="text-primary">
+                <th class="w1">#</th>
+                <th class="w2">Name</th>
+                <th class="w3">E-mail</th>
+                <th class="w4">Subject</th>
+                <th class="w-25">Details</th>
+                <th class="w6">Options</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="text-primary">
+                <th class="w1">#</th>
+                <th class="w2">Name</th>
+                <th class="w3">E-mail</th>
+                <th class="w4">Subject</th>
+                <th class="w-25">Details</th>
+                <th class="w6">Options</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let item of msg ; let i = index">
+                <th class="w1">{{i+1}}</th>
+                <th class="w2">{{item.name}}</th>
+                <th class="w3">{{item.email}}</th>
+                <th class="w4">{{item.subject}}</th>
+                <th class="w-25">{{item.message}}</th>
+                <th class="w-6">
+                    <button class="btn btn-info"> Answer </button>
+                    <button class="btn btn-danger" (click)="delete(item._id)" > Delete </button>
+                </th>  
+            </tr>           
+        </tbody>
+    </table>
+
+</div>
+
+

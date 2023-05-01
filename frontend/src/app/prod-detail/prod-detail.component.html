@@ -10,7 +10,7 @@
             <p class="mb-4">{{prod.description}}</p>
             <div class="d-flex align-items-center pt-2">
 
-                <button (click)="addfav(prod._id)" class="btn btn-primary px-3 mx-1"><i class="fa fa-heart"></i> Add To favorite </button>
-                <button (click)="addcart(prod._id)" class="btn btn-primary px-3 mx-1"><i class="fa fa-shopping-cart"></i> Add To Cart </button>
+                <button *ngIf="adm == 'f'" (click)="addfav(prod._id)" class="btn btn-primary px-3 mx-1"><i class="fa fa-heart"></i> Add To favorite </button>
+                <button *ngIf="adm == 'f'" (click)="addcart(prod._id)" class="btn btn-primary px-3 mx-1"><i class="fa fa-shopping-cart"></i> Add To Cart </button>
 
             </div>

@@ -14,12 +14,15 @@ export class ProdDetailComponent implements OnInit {
   token:any;
   cartprod:any[] = [];
   favprod:any[] = [];
+  adm='';
 
 
 
   constructor(private _prod:ProductService, private act:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
+
+    this.adm = localStorage.getItem("adm")!;
 
     this.id=this.act.snapshot.paramMap.get('id');
 

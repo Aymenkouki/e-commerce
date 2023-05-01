@@ -15,5 +15,14 @@ export class ContactService {
     return this.http.post(this.url + 'ajout', cont);
   }
 
+  delete(id:any){
+    return this.http.delete(this.url + 'supprimer/' + id);
+  }
+
+  getall(){
+    return this.http.get(this.url + 'getall');
+  }
+
+
 
 }

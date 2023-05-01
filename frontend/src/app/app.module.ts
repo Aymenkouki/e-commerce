@@ -24,6 +24,7 @@ import { FavComponent } from './fav/fav.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ModifieComponent } from './modifie/modifie.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AddProdComponent } from './add-prod/add-prod.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { MessagesComponent } from './messages/messages.component';
     OrdersComponent,
     ModifieComponent,
     MessagesComponent,
+    AddProdComponent,
 
   ],
   imports: [

@@ -17,6 +17,7 @@ import { WomenComponent } from './shop/women/women.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ModifieComponent } from './modifie/modifie.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AddProdComponent } from './add-prod/add-prod.component';
 
 const routes: Routes = [
 
@@ -30,7 +31,8 @@ const routes: Routes = [
     {path: 'accessories', component:AccessoriesComponent},
     {path: 'bags', component:BagsComponent},
     {path: 'all', component:AllComponent},
-    {path: 'modifie/:id', component:ModifieComponent}
+    {path: 'modifie/:id', component:ModifieComponent},
+    {path: 'addprod', component:AddProdComponent}
   ]},
   {path:'contact', component:ContactComponent},
   {path:'login', component:LoginComponent},

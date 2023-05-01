@@ -4,3 +4,7 @@ img{
 .par{
     width: 15px;
 }
+.add{
+    justify-content: center;
+    align-items: center;
+}
