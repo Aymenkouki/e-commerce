@@ -13,6 +13,7 @@ export class MessagesComponent implements OnInit {
   constructor(private _cont : ContactService) { }
 
   msg:any;
+  nb=0;
 
   ngOnInit(): void {
 
@@ -21,7 +22,8 @@ export class MessagesComponent implements OnInit {
       next: (res)=>{
 
         this.msg = res;
-        
+        this.nb = this.msg.length;
+
       },
       error: (err)=>{
         console.log(err);

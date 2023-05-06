@@ -15,4 +15,12 @@ export class CartService {
     return this.http.post(this.url + 'ajout', cart);
   }
 
+  getall(){
+    return this.http.get(this.url + 'getall');
+  }
+
+  delete(id:any){
+    return this.http.delete(this.url + 'supprimer/' + id);
+  }
+
 }

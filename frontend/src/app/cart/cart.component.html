@@ -19,7 +19,7 @@
             <tr>
                 <td><img [src]="'http://127.0.0.1:3000/getimage/' + item.image" alt=""></td>
                 <td>{{item.titre}}</td>
-                <td>{{item.prix}} L.E</td>
+                <td>{{item.prix}} $</td>
                 
                 <td>
                     <div class="quantity">
@@ -28,7 +28,7 @@
                         <button [disabled]="quant[i] == 0" (click)="moin(i)" class="btn btn-dark">-</button>
                     </div>
                 </td>
-                <td>{{item.prix * quant[i]}} L.E</td>
+                <td>{{item.prix * quant[i]}} $</td>
                 <td>
                     <button (click)="delete(item._id)" class="btn btn-danger">Delete From Cart List </button>
                 </td>
@@ -40,7 +40,7 @@
                 <th></th>
                 <th></th>
                 <th></th>
-                <th>Total : {{total}} L.E</th>
+                <th>Total : {{total}} $</th>
                 <th><button [disabled]="total == 0" (click)="order()" class="btn btn-success">Order Now</button></th>
             </tr>
         </tfoot>

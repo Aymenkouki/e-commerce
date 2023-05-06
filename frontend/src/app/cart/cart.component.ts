@@ -122,20 +122,15 @@ export class CartComponent implements OnInit {
   order(){
 
     for(let i=0; i<this.prods.length; i++){ 
-    this.Tid.push(this.prods[0]._id);}
+    this.Tid.push(this.prods[i]._id);}
 
     this.ord.ids = JSON.stringify(this.Tid);
     this.Tid  = [];
-    console.log(this.ord.ids);
-    
-    
 
     
     this.ord.quants = JSON.stringify(this.quant);
     this.ord.client = this._auth.getUserDataFromToken()._id;  
     
-    
-
 
     Swal.fire({
       title: 'You want to order now ?',

@@ -1,1 +1,78 @@
-<p>orders works!</p>
+<h1 class="text-danger"> Orders </h1>
+<p class="lead">You have <label class="text-danger">{{nbs}}</label> order(s) in your inbox</p>
+
+
+<div class="row mt-3">
+    <table class="table">
+        <thead>
+            <tr class="text-danger">
+                <th >#</th>
+                <th >Client</th>                
+                <th class="text-center"> Quantity </th>
+                <th> Orders </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="text-danger">
+                <th >#</th>
+                <th >Client</th>
+                <th class="text-center"> Quantity </th>
+                <th> Orders </th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let item of cls ; let i = index">
+                <th>{{i+1}}</th>
+                <th>{{item.lastname}} {{item.name}}</th>
+                <th class="text-center"> {{(this.ord[i].quants.length-1)/2}}</th>
+                <th>
+                    <button class="btn btn-info" data-toggle="modal" data-target="#viewCart" (click)="details(i)">VIEW</button>
+                    <button class="btn btn-danger ml-2" (click)="delete(i)">Delete</button>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="viewCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-info" id="exampleModalLabel">Client: {{cls[z].lastname}} {{cls[z].name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            
+                <tr>
+                    <th class="text-primary w-50">Product</th>
+                    <th class="text-primary  text-center">Quantity</th>
+                    <th class="text-primary text-center">Prices</th>
+                </tr>
+                <tr *ngFor="let item of cmds ; let i = index">
+                    <th class="w-50" >
+                        {{i+1}}- {{item.titre}}
+                    </th>
+                    <th class=" text-center" >
+                        <p>{{quant[i]}}</p>
+                    </th>
+                    <th class=" text-center">
+                        {{item.prix*quant[i]}} $
+                    </th>
+                </tr>
+
+
+        </div>
+        <div class="modal-footer">
+            <h3 class="mr-3">Total: {{total}} $</h3>
+            <button type="button" class="btn btn-primary ml-3">Confirm orders</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

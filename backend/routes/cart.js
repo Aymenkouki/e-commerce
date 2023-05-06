@@ -21,3 +21,33 @@ router.post('/ajout', (req,res)=>{
         }
     )
 });
+
+router.get('/getall' , (req,res)=>{
+    cart.find()
+    .then(
+        (result)=>{
+            res.send(result);
+        }
+    )
+    .catch(
+        (error)=>{
+            res.send(error)
+        }
+    )
+
+});
+
+router.delete('/supprimer/:id', (req,res)=>{
+    let myid = req.params.id;
+    cart.findByIdAndDelete({_id:myid})
+        .then(
+        (result)=>{
+            res.send(result);
+        }
+    )
+    .catch(
+        (error)=>{
+            res.send(error)
+        }
+    )
+});
