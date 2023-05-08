@@ -46,9 +46,8 @@ export class OrdersComponent implements OnInit {
             next: (res)=>{
       
               this.cl = res;  
-              
+
               this.cls.push(this.cl); 
-              
                 
             },
             error: (err)=>{
@@ -57,6 +56,7 @@ export class OrdersComponent implements OnInit {
           })
 
         }
+        
         
       },
       error: (err)=>{
@@ -98,13 +98,16 @@ export class OrdersComponent implements OnInit {
 
     }
 
-    z=0;
+    y='';
+    z='';
 
     details(i:number){
       this.cmds = [];
 
       this.searchCmd(i);
-      this.z=i;
+      this.y = this.cls[i].lastname;
+      this.z=this.cls[i].name;
+
     
     }
 

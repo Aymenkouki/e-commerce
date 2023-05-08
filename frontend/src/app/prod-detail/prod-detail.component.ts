@@ -11,6 +11,13 @@ export class ProdDetailComponent implements OnInit {
 
   id:any;
   prod:any;
+  produit={
+    titre:'',
+    prix:0,
+    description:'',
+    image:''
+
+  }
   token:any;
   cartprod:any[] = [];
   favprod:any[] = [];
@@ -29,7 +36,12 @@ export class ProdDetailComponent implements OnInit {
     this._prod.getbyid(this.id)
     .subscribe({
       next:(res)=>{
+
         this.prod = res;
+
+        this.produit.titre = this.prod.titre ;
+        this.produit.prix = this.prod.prix ;
+        this.produit.description = this.prod.description ;
         
       },
       error:(err)=>{
