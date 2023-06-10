@@ -30,10 +30,17 @@ export class ContactComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Your message has been sended',
+          title: 'Your message has been sent',
           showConfirmButton: false,
           timer: 10000
         })
+        this.cont = {
+          name: '',
+          email:'',
+          subject:'',
+          message:''
+        }
+
         this.router.navigate(['/contact']);
       },
       error: (err)=>{

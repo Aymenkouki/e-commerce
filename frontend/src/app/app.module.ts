@@ -25,6 +25,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { ModifieComponent } from './modifie/modifie.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AddProdComponent } from './add-prod/add-prod.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -55,8 +56,9 @@ import { AddProdComponent } from './add-prod/add-prod.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    NgxPaginationModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

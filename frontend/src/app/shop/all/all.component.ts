@@ -114,4 +114,18 @@ adm='';
   }
 
 
+  page : number = 1;
+  tableSize:number = 4 ;
+  count: number = 0 ;
+  ontabledatachange(event:any){
+      this.page=event;
+  }
+
+
+  tablesizes = [4 , 8 , 12 , 16];
+  ontablesizechange(event:any){
+    this.tableSize = event.target.value;
+    this.page=1;
+  }
+
 }
