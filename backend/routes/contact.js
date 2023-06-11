@@ -51,3 +51,19 @@ router.delete('/supprimer/:id', (req,res)=>{
         }
     )
 });
+
+router.get('/getbyid/:id' , (req,res)=>{
+    let myid = req.params.id;
+    contact.findOne({_id:myid})
+    .then(
+        (result)=>{
+            res.send(result);
+        }
+    )
+    .catch(
+        (error)=>{
+            res.send(error)
+        }
+    )
+
+});

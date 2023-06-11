@@ -23,6 +23,8 @@ export class ContactService {
     return this.http.get(this.url + 'getall');
   }
 
-
+  getbyid(id:any){
+    return this.http.get(this.url + 'getbyid/' + id);
+  }
 
 }

@@ -70,7 +70,23 @@ export class MessagesComponent implements OnInit {
     })
   }
 
-  open(){
+  mssgg:any;
+  subject='';
+  email='';
+
+  answer(id:any){    
+
+    this._cont.getbyid(id)
+    .subscribe({
+      next: (res)=>{
+        this.mssgg = res;
+        this.subject = this.mssgg.subject;
+        this.email = this.mssgg.email;
+      },
+      error: (err)=>{
+        console.log(err);
+      }
+    })
 
     
   }

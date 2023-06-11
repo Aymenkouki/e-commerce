@@ -31,7 +31,7 @@
                 <th class="w4">{{item.subject}}</th>
                 <th class="w-25">{{item.message}}</th>
                 <th class="w-6">
-                    <button class="btn btn-info"> Answer </button>
+                    <button class="btn btn-info" data-toggle="modal" data-target="#answer" (click)="answer(item._id)"> Answer </button>
                     <button class="btn btn-danger" (click)="delete(item._id)" > Delete </button>
                 </th>  
             </tr>           
@@ -41,3 +41,33 @@
 </div>
 
 
+<!-- Modal -->
+<div class="modal fade" id="answer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-info" id="exampleModalLabel">Answering  </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <p class="m-1 text-primary"> E-mail </p>
+            <input  type="email" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="e-mail"/>
+
+            <p class="m-1 text-primary">Subject</p>
+            <input  type="text" [(ngModel)]="subject" name="subject" class="form-control" id="subject" placeholder="subject"/>
+
+            <p class="m-1 text-primary">Text</p>
+            <textarea name="answer" class="form-control" id="answer" rows="5" placeholder="Type your answer here"></textarea>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary ml-3">Send</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
